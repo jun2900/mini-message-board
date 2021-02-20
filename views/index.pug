@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  //p Welcome to #{title}
+  table.table.table-striped
+    tr
+      th User
+      th Text
+      th Added
+
+    each message in messages
+      tr
+        td= message.user
+        td= message.text
+        td= message.added
+  a(href='/new') Submit new message
